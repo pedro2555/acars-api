@@ -44,16 +44,16 @@ position_reports_schema = {
 		'required': True
 	},
 	'transponder': {
-		'type': 'ObjectId',
+		'type': 'objectid',
 		'required': True
 	},
 	'flight': {
-		'type': 'ObjectId'
+		'type': 'objectid'
 	}
 }
 position_reports = {
 	'schema': position_reports_schema,
-	'resource_methods': ['POST']
+	'resource_methods': ['POST', 'GET']
 }
 
 flights_schema = {
@@ -110,4 +110,5 @@ MONGO_USERNAME = os.environ.get('MONGO_USERNAME', '')
 MONGO_PASSWORD = os.environ.get('MONGO_PASSWORD', '')
 MONGO_DBNAME = os.environ.get('MONGO_DBNAME', 'acars-api')
 
-#X_DOMAINS = '*'
+X_DOMAINS = '*'
+DATE_FORMAT = '%Y-%m-%dT%H:%M:%S.%fZ'
