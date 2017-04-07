@@ -23,7 +23,7 @@ import os
 transponders_schema = {
 	'callsign': {
 		'type': 'string',
-		'maxlenght': 5
+		'maxlength': 5
 	}
 }
 transponders = {
@@ -60,20 +60,20 @@ position_reports = {
 flights_schema = {
 	'origin': {
 		'type': 'string',
-		'minlenght': 4,
-		'maxlenght': 4,
+		'minlength': 4,
+		'maxlength': 4,
 		'required': True
 	},
 	'destination': {
 		'type': 'string',
-		'minlenght': 4,
-		'maxlenght': 4,
+		'minlength': 4,
+		'maxlength': 4,
 		'required': True
 	},
 	'alternate': {
 		'type': 'string',
-		'minlenght': 4,
-		'maxlenght': 4,
+		'minlength': 4,
+		'maxlength': 4,
 		'required': True
 	},
 	'route': {
@@ -87,7 +87,7 @@ flights_schema = {
 }
 flights = {
 	'schema': flights_schema,
-	'resource_methods': ['POST']
+	'resource_methods': ['POST', 'GET']
 }
 
 # live_flights = {
