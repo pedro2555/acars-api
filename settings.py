@@ -20,6 +20,17 @@ along with ACARS API.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
 
+transponders_schema = {
+	'callsign': {
+		'type': 'string',
+		'maxlenght': 5
+	}
+}
+transponders = {
+	'schema': transponders_schema,
+	'resource_methods': ['GET', 'POST']
+}
+
 position_reports_schema = {
 	'timestamp': {
 		'type': 'datetime',
@@ -36,10 +47,47 @@ position_reports_schema = {
 	'transponder': {
 		'type': 'ObjectId',
 		'required': True
+	},
+	'flight': {
+		'type': 'ObjectId'
 	}
 }
 position_reports = {
-	'schema': position_reports_schema
+	'schema': position_reports_schema,
+	'resource_methods': ['POST']
+}
+
+flights_schema = {
+	'origin': {
+		'type': 'string',
+		'minlenght': 4,
+		'maxlenght': 4,
+		'required': True
+	},
+	'destination': {
+		'type': 'string',
+		'minlenght': 4,
+		'maxlenght': 4,
+		'required': True
+	},
+	'alternate': {
+		'type': 'string',
+		'minlenght': 4,
+		'maxlenght': 4,
+		'required': True
+	},
+	'route': {
+		'type': 'string',
+		'required': True
+	},
+	'cruise_altitude': {
+		'type': 'number',
+		'required': True
+	}
+}
+flights = {
+	'schema': flights_schema,
+	'resource_methods': ['POST']
 }
 
 # live_flights = {
@@ -50,7 +98,9 @@ position_reports = {
 # }
 
 DOMAIN = {
-	'position_reports': position_reports
+	'transponders': transponders,
+	'position_reports': position_reports,
+	'flights': flights
 }
 
 # We want to seamlessy run our API both locally and on Heroku. If running on
