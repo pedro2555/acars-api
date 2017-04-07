@@ -1,26 +1,26 @@
 #!/usr/bin/env python
 """
-<one line to give the program's name and a brief idea of what it does.>
-Copyright (C) <year>  <name of author>
+Aircraft Communications Addressing and Reporting System API for Flight Simulation
+Copyright (C) 2017  Pedro Rodrigues <prodrigues1990@gmail.com>
 
-This file is part of Foobar.
+This file is part of ACARS API.
 
-Foobar is free software: you can redistribute it and/or modify
+ACARS API is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, version 2 of the License.
 
-Foobar is distributed in the hope that it will be useful,
+ACARS API is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+along with ACARS API.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 from eve import Eve
 import os
-from flask.ext.bootstrap import Bootstrap
+from flask_bootstrap import Bootstrap
 from eve_docs import eve_docs
 
 app = Eve()
