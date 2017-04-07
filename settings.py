@@ -22,8 +22,7 @@ import os
 
 transponders_schema = {
 	'callsign': {
-		'type': 'string',
-		'maxlength': 5
+		'type': 'string'
 	}
 }
 transponders = {
