@@ -1,0 +1,7 @@
+{
+  "name": "ACARS API",
+  "description": "Aircraft Communications Addressing and Reporting System API for Flight Simulation",
+  "repository": "https://github.com/pedro2555/acars-api",
+  "keywords": ["python", "eve", "Flask" ],
+  "addons": [ "mongolab" ]
+}
